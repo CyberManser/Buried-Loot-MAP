@@ -1,0 +1,88 @@
+/* Map container */
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.map {
+    width: 100%;
+    display: block;
+}
+
+/* Clickable dot on map */
+.point {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: #005DFF;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Preview window */
+#hoverPreview {
+    position: fixed;
+    width: 450px;     /* Adjust size if needed */
+    height: 300px;    /* Adjust size if needed */
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+    box-shadow: 0 0 8px black;
+    display: none;
+    pointer-events: none;
+    border-radius: 4px;
+    z-index: 999;
+}
+
+/* Label that appears UNDER preview */
+#hoverLabel {
+    position: fixed;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: none;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 2000;
+    text-align: center;
+}
+
+.point.zipline {
+    background: yellow;
+    border: 2px solid #333;
+}
+
+.Santa.Maria {
+    background: yellow;
+    border: 2px solid #333;
+}
+
+.point {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: #005DFF;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+
+    /* Center the point on coordinates */
+    margin-left: -9px;
+    margin-top: -9px;
+}
+
+.point.azure {
+    background: #00F0FF;                /* neon azure */
+    border: 2px solid white;
+    
+    z-index: 15;
+}
