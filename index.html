@@ -211,7 +211,18 @@
 <!-- ============================= -->
 
 <script>
+const panzoom = Panzoom(zoomTarget, {
+    maxScale: 6,
+    minScale: 0.3,     // allow zooming out more
+    contain: 'outside'
+});
 
+// Set initial zoom level to zoomed OUT
+panzoom.zoom(0.6, { animate: true });
+
+panzoom.pan( (window.innerWidth - zoomTarget.offsetWidth * 0.6) / 2,
+             (window.innerHeight - zoomTarget.offsetHeight * 0.6) / 2 );
+	
 const zoomTarget = document.getElementById("zoomTarget");
 const panzoom = Panzoom(zoomTarget, {
     maxScale: 6,
@@ -349,4 +360,5 @@ function hidePreview() {
 </body>
 
 </html>
+
 
