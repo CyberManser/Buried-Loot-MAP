@@ -211,25 +211,29 @@
 <!-- ============================= -->
 
 <script>
+const zoomWrapper = document.getElementById("zoomWrapper");
+const zoomTarget  = document.getElementById("zoomTarget");
+
+/* ============================
+   ENABLE PAN + ZOOM
+============================ */
 const panzoom = Panzoom(zoomTarget, {
     maxScale: 6,
-    minScale: 0.3,     // allow zooming out more
+    minScale: 0.3,
     contain: 'outside'
 });
 
-// Set initial zoom level to zoomed OUT
+/* Enable mouse wheel zoom */
+zoomWrapper.addEventListener("wheel", panzoom.zoomWithWheel);
+
+/* Initial zoom-out on load */
 panzoom.zoom(0.6, { animate: true });
 
-panzoom.pan( (window.innerWidth - zoomTarget.offsetWidth * 0.6) / 2,
-             (window.innerHeight - zoomTarget.offsetHeight * 0.6) / 2 );
-	
-const zoomTarget = document.getElementById("zoomTarget");
-const panzoom = Panzoom(zoomTarget, {
-    maxScale: 6,
-    minScale: 1,
-    contain: 'outside'
-});
-zoomWrapper.addEventListener("wheel", panzoom.zoomWithWheel);
+/* Center the map after zoom-out */
+panzoom.pan(
+    (window.innerWidth  - zoomTarget.offsetWidth  * 0.6) / 2,
+    (window.innerHeight - zoomTarget.offsetHeight * 0.6) / 2
+);
 
 
 // ======================================================
@@ -360,5 +364,6 @@ function hidePreview() {
 </body>
 
 </html>
+
 
 
