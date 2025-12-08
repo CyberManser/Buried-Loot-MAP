@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Map</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Panzoom Library -->
+    <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js"></script>
+</head>
+<body>
+
+<!-- ZOOM WRAPPER -->
+<div id="zoomWrapper">
+    <!-- ZOOM TARGET (Image + Points) -->
+    <div id="zoomTarget">
+        <img src="FULL - MAP - Buried City.jpg" class="map">
+		
+		<!-- ===== ALL POINTS GO HERE ===== -->
+
+
+    <!-- 1 -->
+    <div class="point" data-image="previews/preview1.gif" data-name="Northern Bus"
+         style="top: 23.42%; left: 39.19%;"></div>
+
+    <!-- 2 -->
+    <div class="point" data-image="previews/preview2.gif" data-name="Marano Station"
+         style="top: 28.28%; left: 29.97%;"></div>
+
+    <!-- 3 -->
+    <div class="point" data-image="previews/preview3.gif" data-name="Marano Station South"
+         style="top: 34.62%; left: 29.71%;"></div>
+
+    <!-- 4 -->
+    <div class="point" data-image="previews/preview4.gif" data-name="East of Marano"
+         style="top: 37.64%; left: 37.69%;"></div>
+
+    <!-- 5 -->
+    <div class="point" data-image="previews/preview5.gif" data-name="West Village Zipline 1"
+         style="top: 54.21%; left: 35.73%;"></div>
+
+    <!-- 6 -->
+    <div class="point" data-image="previews/preview6.gif" data-name="West Village Zipline 2"
+         style="top: 53.73%; left: 34.35%;"></div>
+
+    <!-- 7 -->
+    <div class="point" data-image="previews/preview7.gif" data-name="Grandioso North Rooftop"
+         style="top: 66.40%; left: 26.77%;"></div>
+
+    <!-- 8 -->
+    <div class="point" data-image="previews/preview8.gif" data-name="Grandioso South Rooftop"
+         style="top: 71.22%; left: 25.46%;"></div>
+
+    <!-- 9 -->
+    <div class="point" data-image="previews/preview9.gif" data-name="Abandoned Highway Camp 1"
+         style="top: 75.93%; left: 38.28%;"></div>
+
+    <!-- 10 -->
+    <div class="point" data-image="previews/preview10.gif" data-name="Abandoned Highway Camp 2"
+         style="top: 77.47%; left: 37.03%;"></div>
+
+    <!-- 11 -->
+    <div class="point" data-image="previews/preview11.gif" data-name="Abandoned Highway Camp 3"
+         style="top: 77.66%; left: 38.47%;"></div>
+
+    <!-- 12 -->
+    <div class="point" data-image="previews/preview12.gif" data-name="Old Town Fountain"
+         style="top: 72.46%; left: 58.48%;"></div>
+
+    <!-- 13 -->
+    <div class="point" data-image="previews/preview13.gif" data-name="Red Tower (1)"
+         style="top: 74.38%; left: 67.11%;"></div>
+
+    <!-- 14 -->
+    <div class="point" data-image="previews/preview14.gif" data-name="Red Tower (2)"
+         style="top: 76.73%; left: 69.08%;"></div>
+
+    <!-- 15 -->
+    <div class="point" data-image="previews/preview15.gif" data-name="Buried Bell Tower"
+         style="top: 70.54%; left: 82.87%;"></div>
+
+    <!-- 16 -->
+    <div class="point" data-image="previews/preview16.gif" data-name="South Piazza Arbusto"
+         style="top: 68.06%; left: 75.55%;"></div>
+
+    <!-- 17 -->
+    <div class="point" data-image="previews/preview17.gif" data-name="East of Santa Maria Houses"
+         style="top: 67.07%; left: 58.22%;"></div>
+
+    <!-- 18 -->
+    <div class="point" data-image="previews/preview18.gif" data-name="Santa Maria Houses 1"
+         style="top: 68.68%; left: 52.01%;"></div>
+
+    <!-- 19 -->
+    <div class="point" data-image="previews/preview19.gif" data-name="Santa Maria Houses 2"
+         style="top: 68.62%; left: 55.67%;"></div>
+
+    <!-- 20 -->
+    <div class="point" data-image="previews/preview20.gif" data-name="Santa Maria Houses 3"
+         style="top: 67.26%; left: 54.95%;"></div>
+
+    <!-- 21 -->
+    <div class="point" data-image="previews/preview21.gif" data-name="West of Santa Maria Houses"
+         style="top: 68.12%; left: 47.76%;"></div>
+
+    <!-- 22 -->
+    <div class="point" data-image="previews/preview22.gif" data-name="Corso da Vinci Bridge Truck"
+         style="top: 65.65%; left: 44.49%;"></div>
+
+    <!-- 23 -->
+    <div class="point" data-image="previews/preview23.gif" data-name="Corso da Vinci Kitchen"
+         style="top: 59.07%; left: 46.06%;"></div>
+
+    <!-- 24 -->
+    <div class="point" data-image="previews/preview24.gif" data-name="Corso da Vinci Trash Pile"
+         style="top: 54.67%; left: 43.31%;"></div>
+
+    <!-- 25 -->
+    <div class="point" data-image="previews/preview25.gif" data-name="Corso da Vinci Rooftop Attic"
+         style="top: 53.05%; left: 45.60%;"></div>
+
+    <!-- 26 -->
+    <div class="point" data-image="previews/preview26.gif" data-name="Parking Garage Door 1"
+         style="top: 35.47%; left: 60.97%;"></div>
+
+    <!-- 27 -->
+    <div class="point" data-image="previews/preview27.gif" data-name="Parking Garage Door 2"
+         style="top: 34.87%; left: 63.06%;"></div>
+
+    <!-- 28 -->
+    <div class="point" data-image="previews/preview28.gif" data-name="Parking Garage Door 3"
+         style="top: 33.48%; left: 62.80%;"></div>
+
+    <!-- 29  -->
+    <div class="point" data-image="previews/preview29.gif" data-name="Galleria"
+         style="top: 29.81%; left: 67.44%;"></div>
+
+    <!-- 30  -->
+    <div class="point" data-image="previews/preview30.gif" data-name="Hospital"
+         style="top: 23.61%; left: 54.69%;"></div>
+
+    <!-- 31 Azure -->
+    <div class="point azure" data-image="previews/preview31.gif" data-name="JKV Employee Key"
+         style="top: 38.20%; left: 63.32%;"></div>
+
+    <!-- 32 Azure -->
+    <div class="point azure" data-image="previews/preview32.gif" data-name="Town Hall Key 1"
+         style="top: 55.51%; left: 57.17%;"></div>
+
+    <!-- 33 Azure -->
+    <div class="point azure" data-image="previews/preview33.gif" data-name="Town Hall Key 2"
+         style="top: 54.83%; left: 58.35%;"></div>
+
+    <!-- 34 Azure -->
+    <div class="point azure" data-image="previews/preview34.gif" data-name="Grandioso Key 1"
+         style="top: 67.52%; left: 28.79%;"></div>
+
+    <!-- 35 Azure -->
+    <div class="point azure" data-image="previews/preview35.gif" data-name="Grandioso Key 2"
+         style="top: 66.31%; left: 29.06%;"></div>
+
+    <!-- 36 Azure -->
+    <div class="point azure" data-image="previews/preview36.gif" data-name="Main Street Master Key"
+         style="top: 76.61%; left: 47.63%;"></div>
+
+    <!-- 37 Zipline -->
+    <div class="point zipline" data-image="previews/preview37.gif" data-name="Zipline 5–6"
+         style="top: 58.10%; left: 31.15%;"></div>
+
+    <!-- 38 -->
+    <div class="point zipline" data-image="previews/preview38.gif" data-name="Santa Maria Building Entrance"
+         style="top: 69.36%; left: 49.46%;"></div>
+		 
+	<!-- 39 -->
+    <div class="point zipline" data-image="previews/preview39.gif" data-name="Parking Garage -> Galleria Zipline"
+         style="top: 34.29%; left: 64.24%;"></div>
+		 
+	<!-- 40 -->
+    <div class="point zipline" data-image="previews/preview40.gif" data-name="Galeria -> Hospital Zipline"
+         style="top: 28.26%; left: 66.59%;"></div>
+		 
+	<!-- 41 -->
+    <div class="point purple" data-image="previews/preview41.gif" data-name="Plaza Rosa Farmacia"
+         style="top: 79.38%; left: 59.53%;"></div>
+		 
+	<!-- 42 -->
+    <div class="point purple" data-image="previews/preview42.gif" data-name="Red Tower Lockers"
+         style="top: 75.99%; left: 67.96%;"></div>
+		 
+	<!-- 43 -->
+    <div class="point purple" data-image="previews/preview43.gif" data-name="Piazza Arbusto Farmacia"
+         style="top: 63.50%; left: 80.26%;"></div>
+		 
+	<!-- 44 -->
+    <div class="point purple" data-image="previews/preview43.gif" data-name="Space Travel 6 Floor"
+         style="top: 41.93%; left: 66.07%;"></div>
+		 
+		 
+		 
+
+    </div>
+</div>
+
+
+<!-- PREVIEW WINDOWS -->
+<div id="hoverPreview"></div>
+<div id="hoverLabel"></div>
+
+
+<!-- ============================= -->
+<!--       JAVASCRIPT LOGIC        -->
+<!-- ============================= -->
+
+<script>
+
+const zoomTarget = document.getElementById("zoomTarget");
+const panzoom = Panzoom(zoomTarget, {
+    maxScale: 6,
+    minScale: 1,
+    contain: 'outside'
+});
+zoomWrapper.addEventListener("wheel", panzoom.zoomWithWheel);
+
+
+// ======================================================
+// PREVIEW SYSTEM
+// ======================================================
+const previewBox = document.getElementById("hoverPreview");
+const labelBox   = document.getElementById("hoverLabel");
+
+let isMobile = window.innerWidth <= 768;
+
+
+// ======================================================
+// DESKTOP HOVER LOGIC
+// ======================================================
+if (!isMobile) {
+    document.querySelectorAll(".point").forEach(point => {
+        point.addEventListener("mousemove", (e) => {
+            showPreview(point, e.clientX, e.clientY);
+        });
+        point.addEventListener("mouseleave", hidePreview);
+    });
+}
+
+
+// ======================================================
+// MOBILE TAP LOGIC (pointerdown = works everywhere)
+// ======================================================
+document.querySelectorAll(".point").forEach(point => {
+
+    point.addEventListener("pointerdown", (e) => {
+        e.stopPropagation();
+
+        if (!isMobile) return;  // desktop uses hover
+
+        // Center preview on mobile
+        showPreview(
+            point,
+            window.innerWidth / 2,
+            window.innerHeight / 2
+        );
+    });
+
+});
+
+// CLOSE PREVIEW WHEN TAP OUTSIDE
+document.addEventListener("pointerdown", (e) => {
+    if (!isMobile) return;
+    if (!e.target.classList.contains("point")) hidePreview();
+});
+
+
+// ======================================================
+// SHOW PREVIEW (AUTO SIZE TO GIF)
+// ======================================================
+function showPreview(point, x, y) {
+
+    const imgSrc = point.dataset.image;
+    const name = point.dataset.name;
+
+    const tempImg = new Image();
+    tempImg.src = imgSrc;
+
+    tempImg.onload = function () {
+
+        const imgW = tempImg.width;
+        const imgH = tempImg.height;
+
+        const maxW = window.innerWidth * 0.40;
+        const maxH = window.innerHeight * 0.35;
+
+        const scale = Math.min(maxW / imgW, maxH / imgH);
+        const finalW = imgW * scale;
+        const finalH = imgH * scale;
+
+        previewBox.style.width = finalW + "px";
+        previewBox.style.height = finalH + "px";
+        previewBox.style.backgroundImage = `url(${imgSrc})`;
+
+        previewBox.style.display = "block";
+        labelBox.textContent = name;
+        labelBox.style.display = "block";
+
+        // MOBILE: let CSS place it
+        if (isMobile) return;
+
+        // DESKTOP
+        const screenW = window.innerWidth;
+        const screenH = window.innerHeight;
+
+        let left = x + 20;
+        let top  = y + 20;
+
+        if (left + finalW > screenW) left = x - finalW - 20;
+        if (top + finalH > screenH)  top = y - finalH - 20;
+        if (left < 10) left = 10;
+        if (top < 10)  top = 10;
+
+        previewBox.style.left = left + "px";
+        previewBox.style.top  = top + "px";
+
+        // LABEL
+        let labelLeft = left + finalW / 2 - labelBox.offsetWidth / 2;
+        let labelTop  = top + finalH + 10;
+
+        if (labelLeft < 10) labelLeft = 10;
+        if (labelLeft + labelBox.offsetWidth > screenW - 10)
+            labelLeft = screenW - labelBox.offsetWidth - 10;
+
+        if (labelTop + labelBox.offsetHeight > screenH - 10)
+            labelTop = top - labelBox.offsetHeight - 10;
+
+        labelBox.style.left = labelLeft + "px";
+        labelBox.style.top  = labelTop + "px";
+    }
+}
+
+
+// ======================================================
+// HIDE PREVIEW
+// ======================================================
+function hidePreview() {
+    previewBox.style.display = "none";
+    labelBox.style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
